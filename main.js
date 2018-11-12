@@ -96,8 +96,10 @@ addToCart = function(shoppingItem, price){
   document.querySelector('#cart ul').appendChild(list);
   /* Gets price, adds to current total, and appends to cart*/
   total = total + parseFloat(price);
-  /* fixes weird bug where total would have 20 decimal places */
+  
+  /* fixes weird bug where total would have like 20 decimal places */
   total = Math.round(100*total)/100;
+
   var totalSum = `Total = $${total}`;
   var totalItem = document.createElement('P');
   totalItem.className = "sum";
