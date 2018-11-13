@@ -148,7 +148,7 @@ var total = 0;
 ////////////////////Adds items to cart///////////////////////////
 addToCart = function(shoppingItem, price){
   var list = document.createElement('li');
-  var item = `${shoppingItem} ..................... ${price}`;
+  var item = `${shoppingItem}.....................${price}`;
   list.className = "shopping-item";
   list.innerHTML = item;
   document.querySelector('#cart ul').appendChild(list);
