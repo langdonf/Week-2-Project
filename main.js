@@ -155,7 +155,7 @@ addToCart = function(shoppingItem, price){
   /* Gets price, adds to current total, and appends to cart*/
   total = total + parseFloat(price);
   /* fixes weird bug where total would have like 20 decimal places */
-  total = Math.round(100*total)/100;
+  total = (Math.round(100*total)/100);
   var totalSum = `Total = $${total}`;
   var totalItem = document.createElement('P');
   totalItem.className = "sum";
@@ -257,12 +257,17 @@ populateDairy = function(){
 }
 
 ///////////Grabs Product Information//////////////
-$('#items').on('click', '.card', function() {
+$('#items').on('click', '.card', function(x) {
   var itemName = $(this).find('h4').text();
   var itemPrice = $(this).find('h5').text();
   addToCart(itemName, itemPrice);
+  ///Prevents page from jumping to the top when clicking on something on the lower part////////
+  x.preventDefault();
   }
 );
+
+ ///////////Pre-populates page///////////////////
+window.onload = populateCandy;
 
 //////////////////Adds Event Listeners///////////
 document.getElementById('juice').addEventListener('click', populateJuice);
