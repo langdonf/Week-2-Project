@@ -196,10 +196,18 @@ footer>div{
   font-family: 'Playfair Display SC', serif;
 }
 #footer{
-  margin: 20px auto;
+  margin: 10px auto 20px auto;
   bottom: 10px;
   left: 80px;
 }
+ul.social li{
+  display: inline;
+  color: aliceblue;
+}
+ul.social{
+  margin-top: 20px;
+}
+
 
 /* //////////////// Meadia Queries////////////// */
 @media (max-width: 1000px) {
